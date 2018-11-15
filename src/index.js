@@ -10,14 +10,21 @@ import './styles.scss';
 
 const App = () => {
     return (
-        <div>
+        <blockquote>
             <p>
-                We are a most promising species, Mr. Spock, as predators go. Did you know that? I frequently
-                have my doubts. I dont. Not any more. And maybe in a thousand years or so, we will be able
+                <span>❝ </span>
+                We are a most promising species, Mr. Spock, as predators go. <br />Did you know that? <br />I frequently
+                have my doubts. <br />I dont. Not any more. And maybe in a thousand years or so, we will be able
                 to prove it.
+                <span> ❞</span>
             </p>
-            <small>- Captain Kirk</small>
-        </div>
+            <footer>
+                <img className="badge" src="./src/Starfleet Instructor.ico" />
+                <h3>Captain Kirk <cite>"Arena"</cite></h3>
+                <a className="source-link" target="blank" href="https://medium.freecodecamp.org/how-to-combine-webpack-4-and-babel-7-to-create-a-fantastic-react-app-845797e036ff">source<span>↗</span></a>
+            </footer>
+            <img className="ship" src="./src/ENTERPRISE.109141612_std.png" />
+        </blockquote>
     );
 };
 
