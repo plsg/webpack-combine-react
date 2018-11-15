@@ -3,58 +3,45 @@
 }
 @mixin stars { content: ""; width: 100vmax; height: 100vmax; border-radius: 50%; display: block; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px), radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px), radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px), radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px); background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; }
 @keyframes starShimmer { 0% { transform: rotate(0deg) scale(1.25); } 100% { transform: rotate(360deg) scale(1.25); } }
-@keyframes starShimmer2 { 0% { transform: rotate(0) scale(1.5); } 100% { transform: rotate(-360deg) scale(1.5); } }
-@keyframes starShip { 0% { transform: translate3d(1000vw, 500vw, -99999vw); } 30% { transform: translate3d(-500vw, 100vw, -999vw); } 50% { transform: translate3d(-200vw, 100vw, 100vw); } 100% { transform: translate3d(50vw,-25vw, 300vw); } }
+@keyframes starShimmer2 { 0% { transform: rotate(0) scale(1.5); } 100% { transform: rotate(-360deg) scale(1.5); } } 
+@keyframes starShip {
+  0% {
+    // transform: translate3d(1000vw, 100vw, -99999vw);
+    transform: translate3d(2000rem, -100rem, -99999rem) scaleX(-1) rotateZ(20deg);
+  }
+
+  // 30% {
+  //   transform: translate3d(-500vw, 100vw, -999vw);
+  // }
+
+  49% {
+    // transform: translate3d(-200vw, 50vw, 100vw);
+    transform: translate3d(-70rem, 15rem, -400rem) scaleX(-1) rotateZ(20deg);
+  }
+  50% {
+    // transform: translate3d(-200vw, 50vw, 100vw);
+    transform: translate3d(-70rem, 15rem, -400rem) scaleX(1) rotateZ(0deg);
+  }
+
+  100% {
+    // transform: translate3d(50vw, -25vw, 300vw);
+    transform: translate3d(30rem, -18rem, 400rem) scaleX(1) rotateZ(0deg);
+  }
+}
 
 
-#app {
-  max-width: 20rem;
-  margin: 0 auto;
-  padding-top: 50px;
-}
-body {
-  overflow: hidden;
-  background-color:rgb(4, 0, 19);
-  font-size: 1rem;
-  font-family: "Hammersmith One";
-  color: orange;
-}
-body::before {
-  @include stars;
-  animation: starShimmer 400s linear infinite;
-}
-body::after {
-  @include stars;
-  animation: starShimmer2 400s linear infinite;
-}
-blockquote {
-  perspective: 1000vw;
-}
+#app { max-width: 20rem; margin: 0 auto; padding-top: 50px; }
+body { overflow: hidden; background-color:rgb(4, 0, 19); font-size: 1rem; font-family: "Hammersmith One"; color: orange; }
+body::before { @include stars; animation: starShimmer 400s linear infinite; }
+body::after { @include stars; animation: starShimmer2 400s linear infinite; }
+blockquote { perspective: 1000vw; }
 .ship {
-  animation: starShip 4s ease-in infinite;
+  animation: starShip 6s ease-in infinite;
+  // transform: translate3d(-1rem, -2rem, -200rem) scaleX(-1) rotateZ(20deg);
 }
-p {
-  text-indent: -1rem;
-}
-footer {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.badge {
-  width: 15%;
-  height: 15%;
-  display: inline-block;
-  margin-left: -0.75rem;
-}
+p { text-indent: -1rem; }
+footer { display: flex; align-items: center; flex-wrap: wrap; }
+.badge { width: 15%; height: 15%; display: inline-block; margin-left: -0.75rem; }
 h3 { margin: 0; }
-.source-link {
-  flex-basis: 100%;
-  position: relative;
-  margin-left: 2rem;
-}
-.source-link span {
-  position: absolute;
-  margin-left: 0.3rem;
-  margin-top: 0.1rem;
-}
+.source-link { flex-basis: 100%; position: relative; margin-left: 2rem; }
+.source-link span { position: absolute; margin-left: 0.3rem; margin-top: 0.1rem; }
