@@ -18,6 +18,15 @@ const App = () => {
                 to prove it.
                 <span> ❞</span>
             </p>
+            <p className="hide">
+                <span>❝ </span>
+                You know the greatest danger facing us is ourselves, 
+                and irrational fear of the unknown. 
+                There is no such thing as the unknown. 
+                Only things temporarily hidden, 
+                temporarily not understood.
+                <span> ❞</span>
+            </p>
             <footer>
                 <img className="badge" src="./src/Starfleet Instructor.ico" />
                 <h3>Captain Kirk <cite>"Arena"</cite></h3>
