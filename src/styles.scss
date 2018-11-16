@@ -7,7 +7,7 @@
 @keyframes starShip {
   0% {
     // transform: translate3d(1000vw, 100vw, -99999vw);
-    transform: translate3d(2000rem, -100rem, -99999rem) scaleX(-1) rotateZ(20deg);
+    transform: translate3d(2000rem, -100rem, -79999rem) scaleX(-1) rotateZ(20deg);
   }
 
   // 30% {
@@ -16,11 +16,11 @@
 
   49% {
     // transform: translate3d(-200vw, 50vw, 100vw);
-    transform: translate3d(-70rem, 15rem, -400rem) scaleX(-1) rotateZ(20deg);
+    transform: translate3d(-70rem, 10rem, -400rem) scaleX(-1) rotateZ(20deg);
   }
   50% {
     // transform: translate3d(-200vw, 50vw, 100vw);
-    transform: translate3d(-70rem, 15rem, -400rem) scaleX(1) rotateZ(0deg);
+    transform: translate3d(-70rem, 10rem, -400rem) scaleX(1) rotateZ(0deg);
   }
 
   100% {
@@ -40,6 +40,9 @@ blockquote { perspective: 1000vw; }
   // transform: translate3d(-1rem, -2rem, -200rem) scaleX(-1) rotateZ(20deg);
 }
 p { text-indent: -1rem; }
+.hide {
+  display: none;
+}
 footer { display: flex; align-items: center; flex-wrap: wrap; }
 .badge { width: 15%; height: 15%; display: inline-block; margin-left: -0.75rem; }
 h3 { margin: 0; }
