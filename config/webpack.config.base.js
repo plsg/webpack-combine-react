@@ -3,6 +3,7 @@ const merge = require("webpack-merge");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = env => {
     const { PLATFORM, VERSION } = env;
@@ -28,6 +29,11 @@ module.exports = env => {
                 ]
             },
             plugins: [
+                new CopyWebpackPlugin([
+                    {
+                        from: 'src/static'
+                    }
+                ]),
                 new HtmlWebpackPlugin({
                     template: './src/index.html',
                     filename: './index.html'

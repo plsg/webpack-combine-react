@@ -28,11 +28,11 @@ const App = () => {
                 <span> ❞</span>
             </p>
             <footer>
-                <img className="badge" src="./src/Starfleet Instructor.ico" />
+                < img className = "badge" src = "./dist/images/Starfleet Instructor.ico" / >
                 <h3>Captain Kirk <cite>"Arena"</cite></h3>
                 <a className="source-link" target="blank" href="https://medium.freecodecamp.org/how-to-combine-webpack-4-and-babel-7-to-create-a-fantastic-react-app-845797e036ff">source<span>↗</span></a>
             </footer>
-            <img className="ship" src="./src/ENTERPRISE.109141612_std.png" />
+            <img className="ship" src="./dist/images/ENTERPRISE.109141612_std.png" />
         </blockquote>
     );
 };
