@@ -30,7 +30,7 @@
 }
 
 
-#app { max-width: 20rem; margin: 0 auto; padding-top: 50px; }
+#app { max-width: 19rem; margin: 0 auto; padding-top: 50px; }
 body { overflow: hidden; background-color:rgb(4, 0, 19); font-size: 1rem; font-family: "Hammersmith One"; color: orange; }
 body::before { @include stars; animation: starShimmer 400s linear infinite; }
 body::after { @include stars; animation: starShimmer2 400s linear infinite; }
